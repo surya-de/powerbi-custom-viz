@@ -10,6 +10,7 @@ import IVisual = powerbi.extensibility.visual.IVisual;
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ReactCircleCard, initialState } from "./component";   
+//import { Card, initialCardState } from "./card";
 import IViewport = powerbi.IViewport;
 
 import "./../style/visual.less";
@@ -23,6 +24,7 @@ export class Visual implements IVisual {
 
     constructor(options: VisualConstructorOptions) {
         this.reactRoot = React.createElement(ReactCircleCard, {});
+        //this.reactRoot = React.createElement(Card, {});
         this.target = options.element;
         this.formattingSettingsService = new FormattingSettingsService();
 

@@ -46,7 +46,7 @@ export class ReactCircleCard extends React.Component<{}, State>{
 
         return (
             <div className="circleCard" style={style}>
-                <Card/>
+                <Card text = {textValue}/>
             </div>
         )
     }
