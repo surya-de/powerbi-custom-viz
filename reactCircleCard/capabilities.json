@@ -1,0 +1,55 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Column",
+            "name": "column",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Value",
+            "name": "value",
+            "kind": "Measure"
+        }
+    ],
+    "objects": {
+        "circle": {
+            "properties": {
+               "circleColor": {
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "circleThickness": {
+                    "type": {
+                        "numeric": true
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "table": {
+                "rows": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "column"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "value"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "privileges": []
+}
