@@ -24,7 +24,6 @@ export class Visual implements IVisual {
 
     constructor(options: VisualConstructorOptions) {
         this.reactRoot = React.createElement(ReactCircleCard, {});
-        //this.reactRoot = React.createElement(Card, {});
         this.target = options.element;
         this.formattingSettingsService = new FormattingSettingsService();
 
@@ -32,6 +31,7 @@ export class Visual implements IVisual {
     }
 
     public update(options: VisualUpdateOptions) {
+        console.log(options.dataViews[0]);
         if(options.dataViews && options.dataViews[0]){
             const dataView: DataView = options.dataViews[0];
             this.viewport = options.viewport;
@@ -41,11 +41,11 @@ export class Visual implements IVisual {
             const circleSettings = this.formattingSettings.circleCard;
             
             ReactCircleCard.update({
-                textLabel: dataView.metadata.columns[0].displayName,
+                textfrontLabel: dataView.metadata.columns[0].displayName,
                 size,
                 borderWidth: circleSettings.circleThickness.value,
                 background: circleSettings.circleColor.value.value,
-                textValue: dataView.single.value.toString()
+                textfrontValue: dataView.single.value.toString()
             });
         } else {
             this.clear();

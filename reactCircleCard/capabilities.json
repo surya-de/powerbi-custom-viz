@@ -1,8 +1,8 @@
 {
     "dataRoles": [
         {
-            "displayName": "Measure Data",
-            "name": "measure",
+            "displayName": "Front Data",
+            "name": "front",
             "kind": "Measure"
         }
     ],
@@ -30,13 +30,13 @@
         {
             "conditions": [
                 {
-                    "measure": {
+                    "front": {
                         "max": 1
                     }
                 }
             ],
             "single": {
-                "role": "measure"
+                "role": "front"
             }
         }
     ],
