@@ -2,8 +2,8 @@ import * as React from "react";
 import Card from './card'
 
 export interface State {
-    //textbackLabel: string,
-    //textbackValue: string,
+    textbackLabel: string,
+    textbackValue: string,
     textfrontLabel: string,
     textfrontValue: string,
     size: number,
@@ -12,8 +12,8 @@ export interface State {
 }
 
 export const initialState: State = {
-    //textbackLabel: "",
-    //textbackValue: "",
+    textbackLabel: "",
+    textbackValue: "",
     textfrontLabel: "",
     textfrontValue: "",
     size: 200
@@ -45,12 +45,12 @@ export class ReactCircleCard extends React.Component<{}, State>{
     }
 
     render(){
-        const { textfrontLabel, textfrontValue, size, background, borderWidth } = this.state;
+        const { textbackLabel, textbackValue, textfrontLabel, textfrontValue, size, background, borderWidth } = this.state;
         const style: React.CSSProperties = { width: size, height: size, background, borderWidth };
-
+        const passVars = [ textfrontValue, textbackValue]
         return (
             <div className="circleCard" style={style}>
-                <Card text = {textfrontValue}/>
+                <Card text = {passVars}/>
             </div>
         )
     }

@@ -5,8 +5,8 @@ function Card(props) {
     console.log(props)
     return (
         <div className="card">
-            <div className="card-back"> {props.text} </div>
-            <div className="card-front">Front</div>
+            <div className="card-back"> {props.text[1]} </div>
+            <div className="card-front">{props.text[0]}</div>
             </div>
     )
 }
